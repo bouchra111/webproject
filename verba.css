@@ -1,0 +1,629 @@
+/* la Base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/*  verba will be colorated in teal */
+.titre {
+  color: #008080;
+}
+
+/* the bar in the top (teachers w apply...) */
+#divbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  z-index: 1000;
+  padding: 20px 40px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Logo on Left */
+.logo {
+  width: 120px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* Center Nav ( about us w teachers w apply ywelou in the center) */
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-center ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-center ul li a {
+  text-decoration: none;
+  color: #008080;
+  font-weight: 600;
+  padding: 10px;
+  transition: border-bottom 0.3s ease;
+}
+
+.nav-center ul li a:hover {
+  border-bottom: 2px solid #008080;
+}
+
+/* My Account Button on Right */
+.account-container {
+  position: relative;
+  margin-left: 20px;
+}
+
+.account-button {
+  background-color: teal;
+  color: #f8f9fa;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.account-button i {
+  margin-right: 6px;
+  color: #f8f9fa;
+}
+
+/* Popup box */
+.account-popup {
+  position: absolute;
+  right: 0;
+  top: 55px;
+  background-color: white;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 9999;
+}
+
+.popup-buttons a {
+  flex: 1;
+  margin: 0 5px;
+  padding: 8px;
+  border-radius: 6px;
+  background-color: teal;
+  color: #f8f9fa;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+/* Show popup when checkbox is checked */
+#toggle-account:checked ~ .account-popup {
+  display: block;
+}
+
+.account-popup p {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.popup-buttons button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background-color: teal;
+  color: #f8f9fa;
+  cursor: pointer;
+}
+
+
+
+/* Content ta3 verba words open worlds... */
+.content {
+  position: relative;
+  z-index: 1;
+  height: 100vh;                /* Full viewport height */
+  display: flex;                /* Enables Flexbox */
+  flex-direction: column;       /* Stack items vertically */
+  justify-content: center;      /* Center vertically */
+  align-items: center;          /* Center horizontally */
+  text-align: center;           /* Center text inside elements like <p> or <h1> */
+  
+}
+
+header .content h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+header .content p {
+  margin-top: 20px;
+  font-size: 18px;
+  max-width: 600px;
+}
+
+
+/* Apply Section */
+.apply-section {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 20px;
+  text-align: center;
+  height: auto;
+  color: #222;
+  box-sizing: border-box;
+}
+
+.apply-section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #008080;
+}
+
+.apply-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.apply-form label {
+  text-align: left;
+  font-weight: 600;
+  color: #008080;
+}
+
+.apply-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.apply-form button {
+  padding: 12px;
+  margin-top: 30px;
+  background-color: #008080;
+  color: #fdfdfd;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.apply-form button:hover {
+  background-color: #006666;
+  color: #f0f8f8;
+}
+
+/* Optional: smooth scroll effect */
+html {
+  scroll-behavior: smooth;
+}
+
+.apply-form select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.apply-form input[type="tel"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* l part ta3 teachers*/
+.teachers-section {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.teachers-section h2 {
+  font-size: 32px;
+  color: #008080;
+  margin-bottom: 40px;
+}
+
+.teacher-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.teacher-card {
+  position: relative;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 250px;
+  padding: 20px;
+  opacity: 0.8;
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+
+.teacher-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.teacher-card h3 {
+  margin: 10px 0 5px;
+  color: #008080;
+}
+
+.teacher-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.teacher-card:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 128, 128, 0.3);
+}
+/* about section */
+.about-section {
+  padding: 60px 30px;
+  background-color: white;
+  color: #333;
+  text-align: left;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.text-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  color: #008080;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: black;
+  max-width: 800px;
+}
+
+.imageb {
+  flex: 1;
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+}
+
+
+.level-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #008080;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 2;
+}
+
+.teacher-card:hover .level-badge {
+  background-color: #00a5a5;
+}
+
+.book-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #008080;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-button:hover {
+  background-color: #006666;
+  transform: scale(1.05);
+}
+/* el background li yji mor writing ta3 verbe words open worlds*/
+.background-video {
+      position: absolute;    /* Fixed to the viewport */
+      top: 0;             /* Positioned at the very top */
+      left: 0;            /* Positioned at the very left */
+      width: 100%;        /* Fills the entire width */
+      height: 100%;       /* Fills the entire height */
+      object-fit: cover;  /* Ensures the video covers the area while keeping its aspect ratio */
+      z-index: -1;        /* Places the video behind other elements */
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    .video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  pointer-events: none; /* VERY important: lets form be clickable */
+}
+
+.video-container .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.1); /* Light overlay */
+}
+
+.form-container {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.file-upload {
+  width: 100%;
+}
+
+.upload-box {
+  border: 2px dashed #aaa;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(255,255,255,0.8);
+  cursor: pointer;
+  transition: border-color 0.3s, background 0.3s;
+  color: #444;
+  font-size: 16px;
+}
+
+.upload-box:hover {
+  border-color: #009688;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.upload-box input[type="file"] {
+  display: none;
+}
+
+.auth-body {
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  color: teal;
+  text-align: center;
+}
+
+.auth-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-box label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.auth-box input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.auth-box button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: teal;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.thankyou-body {
+  margin: 0;
+  padding: 0;
+  background: #008080;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.thankyou-box {
+  background: white;
+  color: #008080;
+  padding: 50px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  max-width: 500px;
+  width: 90%;
+}
+
+.thankyou-box h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.thankyou-box p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.back-btn {
+  background: #008080;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #006666;
+}
+
+.contact-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #f8f9fa;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.map-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-left {
+  max-width: 420px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-header img {
+  width: 32px;
+  height: 32px;
+}
+
+.contact-header span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+
+.contact-right h2 {
+  font-size: 24px;
+  color: #008080;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.1);
+}
+
+
